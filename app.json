@@ -2,12 +2,8 @@
     "name": "uscis-demo-database",
     "description": "RESTful API for any PostgreSQL database.",
     "logo": "https://avatars2.githubusercontent.com/u/15115011",
-    "repository": "https://github.com/PostgREST/postgrest",
+    "repository": "https://github.com/davidlarrimore/uscis-demo-database",
     "env": {
-      "BUILDPACK_URL": {
-        "description": "Heroku buildpack for deploying Haskell applications",
-        "value": "https://git.heroku.com/agile-ocean-71570.git"
-      },
       "POSTGREST_VER": {
         "description": "Version of PostgREST to deploy",
         "value": "7.0.1"
@@ -55,5 +51,13 @@
         "description": "A schema-qualified stored procedure name to call right after switching roles for a client request",
         "required": false
       }
-    }
+    },"buildpacks": [
+        {
+            "url": "https://github.com/PostgREST/postgrest.git"
+        }
+    ],    "addons": [
+        {
+            "plan": "heroku-postgres:hobby"
+        }
+    ]
   }
