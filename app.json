@@ -51,13 +51,5 @@
         "description": "A schema-qualified stored procedure name to call right after switching roles for a client request",
         "required": false
       }
-    },"buildpacks": [
-        {
-            "url": "https://github.com/PostgREST/postgrest.git"
-        }
-    ],    "addons": [
-        {
-            "plan": "heroku-postgres:hobby"
-        }
-    ]
+    }
   }
